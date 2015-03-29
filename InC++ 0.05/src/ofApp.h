@@ -8,6 +8,12 @@
  * See https://github.com/danomatika/ofxMidi for documentation
  *
  */
+
+
+// Special thanks to Rebecca Fiebrink for showing me how to make this project in a much simpler and cleverer way, and the general openFrameworks knowledge.
+// Special thanks also to Kiona H. Niehaus, for helping me when my brain wouldn't math so good.
+// Finally, thanks to the MA/MFA Computational Arts cohort at Goldsmiths for the continued support, ideas, critiques, and inspiration.
+
 #pragma once
 
 #include "ofMain.h"
@@ -51,8 +57,7 @@ class ofApp : public ofBaseApp {
     float previousTime;                     // Previous time - used to check when phasor resets
     bool beatCheck;                         // Turns off when reach end of pitch array to stop false triggering
     
-    int tempo;
-    float duration;                         // How long, in seconds, each bar lasts
+    int tempo;                              // Beats per minute
     float freq;                             // Phasor frequency
     
     // Pattern stuff
@@ -98,7 +103,10 @@ class ofApp : public ofBaseApp {
 
 /* BUGS:
  - Sends weird MIDI note when changing bars
- 
+ - Sometimes when changing bars, currentIndex gets stuck and notes won't play
+ - When changing bar in the middle of a bar, the next bar doesn't start until phasor has returned to 1? (Drops not _necessarily_ a bad thing, as the score dictates that performers are allowed to drop out if they wish. But here, this is not determined by choice).
+ - Bar 32: Think last note isn't there
+ - Bar 47: Think missing note
  
  
  

@@ -40,8 +40,8 @@ void ofApp::setup() {
     currentTime = 0;
     previousTime = 0;
     beatCheck = true;
-    tempo = 60;
-    freq = (tempo * beatsInBar[0]) / 60;
+    tempo = 120;
+    freq = (tempo/60)/beatsInBar[0];
     
     // Initialise pattern values
     currentBar = 0;
@@ -969,8 +969,7 @@ void ofApp::audioRequested 	(float * output, int bufferSize, int nChannels){
      
         
         // Calculate speed of phasor
-        duration = (tempo/60) * beatsInBar[currentBar]; // Length of bar in seconds
-        freq = 1/beatsInBar[currentBar]; // Thanks to Kiona H. Niehaus for figuring this calculation out!
+        freq = (tempo/60)/beatsInBar[currentBar]; // Thanks to Kiona H. Niehaus for figuring this calculation out!
         
         // Set phasor
         currentTime = myCounter.phasor(freq, 1, beatsInBar[currentBar]+1);
@@ -1071,15 +1070,15 @@ void ofApp::keyReleased(int key) {
 			midiOut << StartMidi() << 0x80 << 0x3C << 0x40 << FinishMidi();
 			break;
 
-		default:
-    
-			// send a note off if the key is a letter or a number
-			if(isalnum(key)) {
-				note = ofMap(key, 48, 122, 0, 127);
-				velocity = 0;
-				midiOut << NoteOff(channel, note, velocity); // stream interface
-			}
-			break;
+//		default:
+//    
+//			// send a note off if the key is a letter or a number
+//			if(isalnum(key)) {
+//				note = ofMap(key, 48, 122, 0, 127);
+//				velocity = 0;
+//				midiOut << NoteOff(channel, note, velocity); // stream interface
+//			}
+//			break;
 	}
 }
 
