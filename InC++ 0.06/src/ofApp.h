@@ -115,7 +115,7 @@ class ofApp : public ofBaseApp {
  - Sometimes when changing bars, you get two notes triggered at once
  - Bar 32: Think last note isn't there
  - Bar 47: Think missing note
- - Finished doesn't change
+
  
  FEATURES:
  - Add functionality so that you can enter a time, and the program will play the piece over that amount of time

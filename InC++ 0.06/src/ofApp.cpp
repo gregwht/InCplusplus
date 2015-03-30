@@ -935,7 +935,9 @@ void ofApp::update() {}
 void ofApp::draw() {
 
 	// let's see something
-	ofSetColor(0);
+    if (finished == false){ofSetColor(0);}
+    else {ofSetColor(255, 0, 0);}
+    
 	stringstream text;
 	text << "connected to port " << midiOut.getPort() 
 		 << " \"" << midiOut.getName() << "\"" << endl
@@ -947,8 +949,8 @@ void ofApp::draw() {
          << "tempo: " << tempo << endl
          << "freq: " << freq << endl << endl
          << "bar: " << currentBar << endl
-         << "Pitches in bar: " << arrayLength[currentBar] << endl
-         << "Beats in bar: " << beatsInBar[currentBar] << endl << endl
+         << "pitches in bar: " << arrayLength[currentBar] << endl
+         << "beats in bar: " << beatsInBar[currentBar] << endl << endl
          << "note: " << note << endl
          << "current time: " << currentTime << endl
          << "current index: " << currentIndex << endl
@@ -1050,7 +1052,7 @@ void ofApp::audioRequested 	(float * output, int bufferSize, int nChannels){
         //midiOut << NoteOff(channel, note, velocity);
     
         // Flag when performer has finished last bar
-        if (progress >= threshold && currentBar == 53) {finished == true;}
+        if (progress >= threshold && currentBar == 53) {finished = true;}
         
    }
 
