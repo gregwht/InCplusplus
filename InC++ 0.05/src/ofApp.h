@@ -108,7 +108,17 @@ class ofApp : public ofBaseApp {
  - Bar 32: Think last note isn't there
  - Bar 47: Think missing note
  
- 
+ FEATURES:
+ - Add functionality so that you can enter a time, and the program will play the piece over that amount of time
+ - Have a counter, up to say 50 +/- a margin. After the bar has been plahed, add the vector.size(); to that counter. After it passes the threshold, move on to next bar
+ - Next bar 9/10 the next bar, 1/10 C pulse. If C pulse, save currentBar as savedBar, then after performer is finished with C pulse, play savedBar + 1. 
+ = Classes: Give performers a loadBars function that loads the pitch and time data vectors. Then stick it at the bottom of the screen.
+   - For (i = 1; i < performerNum+1; i++)
+    - performer[i].setup()
+    - performer[i].loadBars()
+    - performer[i].play()
+ - Pulse player
+
  
  
  */
