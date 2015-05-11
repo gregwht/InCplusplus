@@ -6,19 +6,30 @@ In C++ works on Mac OS X Yosemite 10.10.3, and should work on any operating syst
 
 ***
 REQUIRES:
+
 	•	Dan Wilcox’s ofxMIDI addon: https://github.com/danomatika/ofxMidi
+	
 	•	Mick Grierson’s ofxMaxim addon: https://github.com/micknoise/Maximilian
 
 ***
 HOW TO RUN:
+
 	•	Please put the InC++ master folder in your apps folder.
+	
 	•	When running the code, choose the number of virtual performers in ofApp.h, under #define PERFORMER_NUM
+	
 	•	Determine the tempo in ofApp.setup()
+	
 	•	Open your DAW of choice / prepare your MIDI hardware
+	
 	•	Route each MIDI track in your DAW to a separate Performer port (there should be one for each Performer)
+	
 	•	Allow monitoring / record-arm your tracks to hear incoming MIDI
+	
 	•	See video documentation on www.whitenoises.co.uk for example of how to run the program
+	
 	•	Feel free to direct any questions to @gregwht on Twitter.
+	
 
 ***
 Please enjoy In C++.
