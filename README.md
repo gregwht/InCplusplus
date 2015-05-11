@@ -25,7 +25,7 @@ Please enjoy In C++.
 
 ***
 
-/*
+
  ----------------------------------------------------
  ||                                                ||
  ||                    In  C++                     ||
@@ -35,8 +35,11 @@ Please enjoy In C++.
  ----------------------------------------------------
  
  Workshops in Creative Coding Term 2 Project
+ 
  IS571015B
+ 
  MA in Computational Arts
+ 
  Goldsmiths' College
  
  Special thanks to Rebecca Fiebrink for showing me how to make this project in a much simpler and cleverer way, and for the wealth of general openFrameworks knowledge.
@@ -125,4 +128,3 @@ Please enjoy In C++.
         - Add functionality so that you can enter a time, and the program will play the piece over that amount of time
         - Add transposition feature: (Performance directions:) "It is OK to transpose patterns by an octave, especially to transpose up. Transposing down by octaves works best on the patterns containing notes of long durations. Augmentation of rhythmic values can also be effective."
 
- */
