@@ -1,5 +1,4 @@
 # InCplusplus
-Workshops in Creative Coding Project 2
 
 IN C++ README
 In C++ works on Mac OS X Yosemite 10.10.3, and should work on any operating system that supports the ofxMidi and ofxMaxim addons.
@@ -37,17 +36,6 @@ Please enjoy In C++.
 ***
 
 
- ----------------------------------------------------
- ||                                                ||
- ||                    In  C++                     ||
- ||                 Version  0.15                  ||
- ||                 Gregory White                  ||
- ||                                                ||
- ----------------------------------------------------
- 
- Workshops in Creative Coding Term 2 Project
- 
- IS571015B
  
  MA in Computational Arts
  
